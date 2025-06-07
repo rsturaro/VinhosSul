@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vinhos do Sul</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Vinhos do Sul</div>
+    <nav class="menu">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#contato">Contato</a>
+      <a href="#">Sobre Nós</a>
+    </nav>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/vinhosdosul.abc" target="_blank"><img src="icons8-instagram-50.png" alt="Instagram"></a>
+      <a href="https://wa.me/+5511986243799" target="_blank"><img src="icons8-whatsapp-50.png" alt="WhatsApp"></a>
+    </div>
+  </header>
+
+<div class="carrinho">
+  <img src="icons8-carrinho-30.png" alt="Carrinho de Compras">
+  <span id="contador-carrinho"></span>
+  <div class="carrinho-detalhes" id="carrinhoDetalhes">
+  <h3>Seu Carrinho</h3>
+  <ul id="listaCarrinho"></ul>
+  <p><strong>Total:</strong> R$ <span id="totalCarrinho">0,00</span></p>
+  <button id="limparCarrinho">Limpar Carrinho</button>
+</div>
+
+</div>
+
+<!-- VINHOS DESTAQUE -->
+  <section class="secao-vinhos-destaque">
+    <h1 class="titulo-estilizado">Vinhos Destaques</h1>
+    <div class="produtos">
+      <div class="produto">
+        <img src="8.jpg" alt="Vinho 1">
+        <h3>Vinho Tinto Premium</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <span>R$ 99,00</span>
+        <button class="botao-comprar" data-preco="99,00">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="12.jpg" alt="Vinho 2">
+        <h3>Vinho Branco Seco</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <span>R$ 99,90</span>
+        <button>Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="19.jpg" alt="Vinho 3">
+        <h3>Espumante Rosé</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <span>R$ 149,90</span>
+        <button>Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="whatsapp-button-container">
+        <a href="https://wa.me/+5511986243799" class="whatsapp-button" target="_blank">
+            <img src="icons8-whatsapp-50.png" alt="WhatsApp"> Conversar no Whatsapp
+        </a>
+    </div>  
+
+  <!-- CARROSSEL DE VINHOS -->
+   <section id="catalogo">
+  <section class="secao-carrossel">
+    <h2 class="titulo-estilizado">Catálogo</h2>
+    <div class="carrossel-container">
+      <button class="carrossel-botao carrossel-anterior">❮</button>
+      <div class="carrossel">
+        <div class="carrossel-wrapper">
+          <!--PRODUTOS DO CARROSSEL-->
+          <div class="produto">
+            <img src="1.jpg" alt="Vinho 1">
+            <h3>Vinho 1</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 129,90</span>
+            <button>Comprar</button>
+          </div>
+          <div class="produto">
+            <img src="2.jpg" alt="Vinho 2">
+            <h3>Vinho 2</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 99,90</span>
+            <button>Comprar</button>
+          </div>
+          <div class="produto">
+            <img src="3.jpg" alt="Vinho 3">
+            <h3>Vinho 3</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 149,90</span>
+            <button>Comprar</button>
+          </div>
+           <div class="produto">
+            <img src="4.jpg" alt="Vinho 4">
+            <h3>Vinho 4</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 129,90</span>
+            <button>Comprar</button>
+          </div>
+          <div class="produto">
+            <img src="5.jpg" alt="Vinho 5">
+            <h3>Vinho 5</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 99,90</span>
+            <button>Comprar</button>
+          </div><div class="produto">
+            <img src="6.jpg" alt="Vinho 6">
+            <h3>Vinho 6</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 149,90</span>
+            <button>Comprar</button>
+          </div>
+           <div class="produto">
+            <img src="7.jpg" alt="Vinho 7">
+            <h3>Vinho 7</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 129,90</span>
+            <button>Comprar</button>
+          </div>
+          <div class="produto">
+            <img src="8.jpg" alt="Vinho 8">
+            <h3>Vinho 8</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 99,90</span>
+            <button>Comprar</button>
+          </div>
+          <div class="produto">
+            <img src="9.jpg" alt="Vinho 9">
+            <h3>Vinho 9</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 149,90</span>
+            <button>Comprar</button>
+          </div>
+           <div class="produto">
+            <img src="10.jpg" alt="Vinho 10">
+            <h3>Vinho 10</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 129,90</span>
+            <button>Comprar</button>
+          </div>
+          <div class="produto">
+            <img src="11.jpg" alt="Vinho 11">
+            <h3>Vinho 11</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 99,90</span>
+            <button>Comprar</button>
+          </div>
+          <div class="produto">
+            <img src="12.jpg" alt="Vinho 12">
+            <h3>Vinho 12</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 149,90</span>
+            <button>Comprar</button>
+          </div>
+           <div class="produto">
+            <img src="13.jpg" alt="Vinho 13">
+            <h3>Vinho 13</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 129,90</span>
+            <button>Comprar</button>
+          </div>
+          <div class="produto">
+            <img src="14.jpg" alt="Vinho 14">
+            <h3>Vinho 14</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 99,90</span>
+            <button>Comprar</button>
+          </div>
+          <div class="produto">
+            <img src="15.jpg" alt="Vinho 15">
+            <h3>Vinho 15</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 149,90</span>
+            <button>Comprar</button>
+          </div>
+           <div class="produto">
+            <img src="16.jpg" alt="Vinho 16">
+            <h3>Vinho 16</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 129,90</span>
+            <button>Comprar</button>
+          </div>
+          <div class="produto">
+            <img src="17.jpg" alt="Vinho 17">
+            <h3>Vinho 17</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 99,90</span>
+            <button>Comprar</button>
+          </div>
+          <div class="produto">
+            <img src="18.jpg" alt="Vinho 18">
+            <h3>Vinho 18</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 149,90</span>
+            <button>Comprar</button>
+          </div>
+           <div class="produto">
+            <img src="19.jpg" alt="Vinho 19">
+            <h3>Vinho 19</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>R$ 129,90</span>
+            <button>Comprar</button>
+          </div>
+        </div>
+      </div>
+      <button class="carrossel-botao carrossel-proximo">❯</button>
+    </div>
+    <div class="carrossel-paginacao"></div>
+    <div class="carrossel-indicadores"></div>
+  </section>
+  </section>
+
+  <!-- AVALIAÇÕES -->
+   <section id="avaliacoes">
+  <section class="secao-avaliacoes">
+    <h2 class="titulo-estilizado">Avaliações</h2>
+    <div class="grid-avaliacoes">
+      <div class="avaliacao">
+        <img src="insta6.png" alt="Foto do cliente" onerror="this.src='URL_DE_UMA_IMAGEM_PADRAO'">
+        <p>⭐️⭐️⭐️⭐️⭐️ Excelente vinho, recomendo!</p>
+        <cite>Maria Silva</cite>
+      </div>
+      <div class="avaliacao">
+        <img src="insta.png" alt="Foto do cliente" onerror="this.src='URL_DE_UMA_IMAGEM_PADRAO'">
+        <p>⭐️⭐️⭐️⭐️ Muito saboroso e encorpado.</p>
+        <cite>João Pereira</cite>
+      </div>
+      <div class="avaliacao">
+        <img src="insta5.png" alt="Foto do cliente" onerror="this.src='URL_DE_UMA_IMAGEM_PADRAO'">
+        <p>⭐️⭐️⭐️⭐️⭐️ Entrega rápida e produto de qualidade.</p>
+        <cite>Ana Souza</cite>
+      </div>
+      <div class="avaliacao">
+        <img src="insta2.png" alt="Foto do cliente" onerror="this.src='URL_DE_UMA_IMAGEM_PADRAO'">
+        <p>⭐️⭐️⭐️⭐️⭐️ Gostei bastante do aroma.</p>
+        <cite>Carlos Rocha</cite>
+      </div>
+       <div class="avaliacao">
+        <img src="insta4.png" alt="Foto do cliente" onerror="this.src='URL_DE_UMA_IMAGEM_PADRAO'">
+        <p>⭐️⭐️⭐️⭐️⭐️ Nota 10, tudo maravilhoso!!</p>
+        <cite>Valdir Ribeiro</cite>
+      </div>
+       <div class="avaliacao">
+        <img src="insta3.png" alt="Foto do cliente" onerror="this.src='URL_DE_UMA_IMAGEM_PADRAO'">
+        <p>⭐️⭐️⭐️⭐️⭐️ Todos aqui em casa amaram, inclusive eu! </p>
+        <cite>Raphael Lima</cite>
+      </div>
+    </div>
+  </section>
+  </section>
+
+ <div class="whatsapp-button-container">
+        <a href="https://wa.me/+5511986243799" class="whatsapp-button" target="_blank">
+            <img src="icons8-whatsapp-50.png" alt="WhatsApp"> Conversar no Whatsapp
+        </a>
+    </div> 
+  
+  <!-- PUBLICAÇÕES INSTAGRAM -->
+   <section id="contato">
+  <section class="secao-instagram">
+    <h2 class="titulo-estilizado">Instagram @Vinhosdosul.abc</h2>
+    <div class="grid-instagram">
+      
+      <a href="https://www.instagram.com/vinhosdosul.abc">
+      <img src="vinho1.png" alt="Post 1">
+      </a>
+
+      <a href="https://www.instagram.com/vinhosdosul.abc">
+      <img src="vinho2.png" alt="Post 2">
+      </a> 
+
+      <a href="https://www.instagram.com/vinhosdosul.abc">
+      <img src="vinho3.png" alt="Post 2">
+      </a>  
+      
+    </div>
+  </section>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+        <p>© 2025 Vinhos do Sul. Todos os direitos reservados.</p>
+        <p>Site seguro | Política de Privacidade | Desenvolvido por Sturaro Web</p>
+        <div class="footer-social-icons">
+            <a href="https://www.instagram.com/vinhosdosul.abc" target="_blank"><img src="icons8-instagram-50.png" alt="Instagram"></a>
+            <a href="https://wa.me/+5511986243799" target="_blank"><img src="icons8-whatsapp-50.png" alt="WhatsApp"></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

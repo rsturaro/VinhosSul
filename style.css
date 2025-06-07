@@ -1,0 +1,514 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff8f4;
+  color: #333;
+  -webkit-tap-highlight-color: transparent;
+  -tap-highlight-color: transparent;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7b1e22;
+  padding: 20px;
+  color: white;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 400;
+  font-family: 'Great Vibes', cursive;
+  font-style: normal;
+}
+
+.menu a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #ddd;
+}
+
+.social-icons img {
+  width: 30px;
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+.carrinho {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffffff;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1000;
+  -webkit-tap-highlight-color: transparent;
+  -tap-highlight-color: transparent;
+}
+
+.carrinho img {
+  width: 28px;
+  height: 28px;
+}
+
+
+.carrinho:hover {
+  transform: scale(1.1);
+  background-color: #f8f8f8;
+}
+
+.carrinho-contador {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 18px;
+  font-weight: bold;
+  display: none;          /* escondido enquanto vazio */
+  pointer-events: none;   /* evita cliques na bolinha */
+}
+
+.carrinho-detalhes {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #fff;
+  color: #333;
+  width: 260px;
+  max-height: 320px;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none; 
+}
+
+.carrinho-detalhes h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #7b1e22;
+}
+
+.carrinho-detalhes ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.carrinho-detalhes ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+#limparCarrinho {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#limparCarrinho:hover {
+  background-color: #c82333;
+}
+
+/* SEÇÕES */
+section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 0px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #7b1e22;
+}
+
+/* TÍTULOS ESTILIZADOS */
+.titulo-estilizado {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #7b1e22;
+  margin-bottom: 10px;
+}
+
+/* CARROSSEL */
+.secao-carrossel {
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.carrossel-container {
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 20px;
+  overflow: hidden; /* vai mudar no mobile */
+}
+
+.carrossel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carrossel-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  transition: transform 0.5s ease-in-out;
+  scroll-snap-align: center;
+  padding-left: 0px;
+  scroll-behavior: smooth;
+}
+
+.carrossel .produto {
+  width: 250px;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.carrossel-botao {
+  background-color: #7b1e22;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin: 0 10px;
+}
+
+.carrossel-botao:hover {
+  background-color: #5e1518;
+}
+
+.carrossel-anterior {
+  left: 10px;
+}
+
+.carrossel-proximo {
+  right: 10px;
+}
+
+/* VINHOS DESTAQUE */
+.secao-vinhos-destaque .produtos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.secao-vinhos-destaque .produto, .carrossel .produto {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  flex-shrink: 0;
+}
+
+.secao-vinhos-destaque .produto img, .carrossel .produto img {
+  max-width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+
+.secao-vinhos-destaque .produto button, .carrossel .produto button {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.secao-vinhos-destaque .produto button:hover, .carrossel .produto button:hover {
+  background-color: #218838;
+}
+
+/* AVALIAÇÕES */
+.secao-avaliacoes h2, .secao-instagram h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #7b1e22;
+}
+
+.grid-avaliacoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.avaliacao {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avaliacao img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.avaliacao cite {
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+/* INSTAGRAM */
+.secao-instagram .grid-instagram {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.secao-instagram .grid-instagram img {
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+}
+
+/* FOOTER */
+footer {
+  background-color: #7b1e22;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Whatsapp Button */
+.whatsapp-button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-button img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.whatsapp-button:hover {
+  background-color: #128C7E;
+}
+
+/* Footer Social Icons */
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer-social-icons {
+  margin-top: 10px;
+}
+
+footer .footer-social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer .footer-social-icons img {
+  width: 30px;
+  transition: transform 0.3s;
+}
+
+footer .footer-social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  section {
+    padding: 30px 15px;
+  }
+
+  h1 {
+    font-size: 2.0rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 24px;
+    margin-bottom: 1px;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu a {
+    margin: 5px 0;
+  }
+
+  .social-icons {
+    margin-top: 3px;
+  }
+
+  /* === CARROSSEL MOBILE MELHORADO === */
+  .carrossel-wrapper {
+    display: flex;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carrossel-wrapper::-webkit-scrollbar {
+    display: none; /* esconde scrollbar */
+  }
+
+  .carrossel .produto {
+    flex: 0 0 auto;
+    width: 65vw; /* largura responsiva, evita corte */
+    scroll-snap-align: center;
+  }
+
+  .carrossel-botao {
+    display: none; /* esconde botões no mobile */
+  }
+
+  /* Ajustes responsivos normais */
+  .secao-vinhos-destaque .produtos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .secao-vinhos-destaque .produto {
+    width: 80%;
+  }
+
+  .grid-avaliacoes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avaliacao {
+    width: 90%;
+  }
+
+  .secao-instagram .grid-instagram {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .secao-instagram .grid-instagram img {
+    width: 100%;
+    height: auto;
+  }
+
+  footer .footer-content {
+    align-items: center;
+  }
+
+  footer .footer-social-icons {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carrossel-indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .carrossel-indicadores .indicador {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background-color 0.3s;
+  }
+
+  .carrossel-indicadores .indicador.ativo {
+    background-color: #7b1e22;
+  }
+}

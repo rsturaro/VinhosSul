@@ -1,0 +1,1 @@
+ALTERAÇÕES: No PC no catálogo vai até o vinho 19 e fica até a metade, no celular vai até o 14 e fica até a metade, deixe o carrossel no celular pra que eu consiga rodar o carrossel arrastando o dedo! se for necessário instalo bibliotecas. O header no celular esta desproporcional, faça alguma alteração criativa! 
